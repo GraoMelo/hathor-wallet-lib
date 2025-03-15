@@ -37,11 +37,14 @@
     "isomorphic-ws": "^4.0.1",
     "lodash": "^4.17.11",
     "long": "^4.0.0",
-    "ws": "^7.2.1"
+    "ws": "^7.2.1",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "test": "jest --env=node --forceExit",
-    "build": "babel --presets @babel/preset-react -d lib/ src"
+    "build": "babel --presets @babel/preset-react -d lib/ src",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "MIT",
   "devDependencies": {
@@ -67,5 +70,6 @@
   "bugs": {
     "url": "https://github.com/HathorNetwork/hathor-wallet-lib/issues"
   },
-  "homepage": "https://github.com/HathorNetwork/hathor-wallet-lib#readme"
+  "homepage": "https://github.com/HathorNetwork/hathor-wallet-lib#readme",
+  "snyk": true
 }
